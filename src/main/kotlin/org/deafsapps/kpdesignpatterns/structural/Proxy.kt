@@ -15,7 +15,7 @@ import java.util.*
  * The Proxy pattern suggests that you create a new proxy class with the **same interface** as an original service object.
  * Then you update your app so that it passes the proxy object to all the original object’s clients.
  *
- * Example:
+ * Android Example:
  * Creating a validator for bank accounts which perform some additional checks to assess whether an operation can be
  * carried out or not.
  */

@@ -16,6 +16,10 @@ import java.lang.IllegalStateException
  * Solution:
  * The Factory Method design pattern suggests that direct object construction calls can be replaced with calls to a
  * special **factory method**. Objects returned by a factory method are often referred to as products.
+ *
+ * Android Example:
+ * In classic Android development, RecyclerView.ViewHolder entities could use the factory method design pattern to
+ * instantiate a specific ViewHolder according to a certain type ('getItemViewType').
  */
 
 fun main() {
@@ -34,6 +38,7 @@ fun main() {
  * of the Abstract Factory design pattern.
  */
 interface ViewFactory<T> {
+    // This is the actual factory method!
     fun createView(type: ViewType): T
 
     // We've decided to add a certain hierarchy here to facilitate factory's work

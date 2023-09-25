@@ -21,7 +21,6 @@ import kotlin.math.pow
  */
 
 fun main() {
-
     val shapeRepository: MutableList<Shape> = mutableListOf()
 
     val circleBlueprint: Shape = Circle(color = "red", radius = 2.0)
