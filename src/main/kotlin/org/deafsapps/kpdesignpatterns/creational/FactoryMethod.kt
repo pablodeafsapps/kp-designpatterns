@@ -9,7 +9,7 @@ import java.lang.IllegalStateException
  * pattern is useful when we need to decouple the creation of an object from its implementation.
  *
  * Problem:
- * When we have to deal with certain related objects following an inheritance relationship, it's better to abstract out
+ * When we have to deal with certain related objects following inheritance relationship, it's better to abstract out
  * how these objects get instantiated, so that we avoid coupling that code with the objects themselves. Bear in mind
  * some more child classes may be required in the future.
  *
