@@ -35,7 +35,7 @@ fun main() {
         setStrategy(strategy = null)
         runCatching { makeSound() }.run(::println)
     }
-    }
+}
 
 /*
  * The context defines the interface of interest to clients.
