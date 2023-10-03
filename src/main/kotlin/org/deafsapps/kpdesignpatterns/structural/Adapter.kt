@@ -47,6 +47,7 @@ interface KelvinThermometerAdapter {
 }
 
 class KelvinThermometerAdapterImpl(override val kelvinThermometer: KelvinThermometer) : KelvinThermometerAdapter {
+
     override fun setTemperatureFromKelvin(temperature: Kelvin) {
         kelvinThermometer.temperature = temperature
     }
@@ -61,7 +62,8 @@ class KelvinThermometerAdapterImpl(override val kelvinThermometer: KelvinThermom
         kelvinThermometer.temperature = Kelvin(measure = kelvinMeasure)
     }
 
-    override fun fetchTemperatureInfo(): String = "Current temperature is ${kelvinThermometer.temperature.measure} Kelvin degrees"
+    override fun fetchTemperatureInfo(): String =
+        "Current temperature is ${kelvinThermometer.temperature.measure} Kelvin degrees"
 }
 
 class KelvinThermometer(var temperature: Kelvin = Kelvin(measure = -1f))

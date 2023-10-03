@@ -42,9 +42,9 @@ fun main() {
  * The context maintains a reference to one of the strategy objects. The context doesn't know the concrete class of a
  * strategy. It should work with all strategies via the strategy interface.
  *
- * Bear in mind we could avoid having a 'setStrategy' function and make 'soundStrategy' public and immutable, so it gets
+ * Bear in mind we could avoid having a 'setStrategy' function and make 'soundStrategy' immutable, so it gets
  * defined when instantiating the context. Both approaches are valid. In other words:
- * class AnimalSoundContext(val soundStrategy: AnimalSoundStrategy? = null)
+ * class AnimalSoundContext(private val soundStrategy: AnimalSoundStrategy? = null)
  */
 class AnimalSoundContext(private var soundStrategy: AnimalSoundStrategy? = null) {
 
