@@ -5,13 +5,16 @@ package org.deafsapps.kpdesignpatterns.behavioral
  * any events that happen to the object they’re observing.
  *
  * Problem:
- * Sometimes you want to get
+ * Sometimes you want certain changes to get broadcast to several classes or entities without setting up any coupling or
+ * holding strong references.
  *
  * Solution:
  * The Observer pattern suggests that you add a subscription mechanism to the publisher class so individual objects can
  * subscribe to or unsubscribe from a stream of events coming from that publisher.
  *
  * Android Example:
+ * In current Android Development, the Observer design pattern is rather popular since it's when implementing MVVM. Either
+ * LiveData or StateFlow are good examples of observers to get subscribed to.
  */
 
 fun main() {

@@ -7,7 +7,8 @@ import java.lang.IllegalStateException
  * restricts direct communications between the objects and forces them to collaborate only via a mediator object.
  *
  * Problem:
- *
+ * When working in a feature upgrade you may find yourself in a situation where dependency relationships are too and
+ * rather complex, which makes the whole solution difficult to work with and almost impossible to upgrade nicely.
  *
  * Solution:
  * The Mediator pattern suggests that you should cease all direct communication between the components which you want to
