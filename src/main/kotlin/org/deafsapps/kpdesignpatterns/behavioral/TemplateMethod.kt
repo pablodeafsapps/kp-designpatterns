@@ -1,7 +1,7 @@
 package org.deafsapps.kpdesignpatterns.behavioral
 
 /**
- * Template Method is a behavioral design pattern that defines the skeleton of an algorithm in the superclass but lets
+ * Template Method is a behavioral design pattern that defines the skeleton of an algorithm in the superclass but let
  * subclasses override specific steps of the algorithm without changing its structure.
  *
  * Problem:
