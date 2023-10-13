@@ -1,4 +1,4 @@
-package org.deafsapps.kp_designpatterns
+package org.deafsapps.kpdesignpatterns
 
 fun main(args: Array<String>) {
     println("Hello World!")
