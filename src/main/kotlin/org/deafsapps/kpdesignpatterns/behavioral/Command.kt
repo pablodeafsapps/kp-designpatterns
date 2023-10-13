@@ -16,8 +16,8 @@ package org.deafsapps.kpdesignpatterns.behavioral
  * There are several components to the Command Design Pattern:
  * - Command interface: This is an interface that defines the common methods for all commands. It usually has a single
  * method called 'execute()' that performs the action.
- * - Command class: This is a class that implements the Command interface and defines the behavior of a specific command.
- * It contains a reference to the object that will perform the action.
+ * - Command class: This is a class that implements the Command interface and defines the behavior of a specific
+ * command. It contains a reference to the object that will perform the action.
  * - Invoker: This is a class that requests an action to be performed by a command. It doesn't know how the action will
  * be performed or who will perform it.
  * - Receiver: This is a class that performs the actual action. The command object sends the request to the receiver
@@ -33,9 +33,12 @@ fun main() {
     val editor = TextEditor("Hello World!")
     val invoker = TextEditorInvoker()
 
-    invoker.executeCommand(CutCommand(receiver = editor, clipboard = clipboard)) // cuts last character of initial content to clipboard
-    invoker.executeCommand(CopyCommand(receiver = editor, clipboard = clipboard)) // copies current content to clipboard
-    invoker.executeCommand(PasteCommand(receiver = editor, clipboard = clipboard)) // pastes current clipboard content to text editor
+    // cuts last character of initial content to clipboard
+    invoker.executeCommand(CutCommand(receiver = editor, clipboard = clipboard))
+    // copies current content to clipboard
+    invoker.executeCommand(CopyCommand(receiver = editor, clipboard = clipboard))
+    // pastes current clipboard content to text editor
+    invoker.executeCommand(PasteCommand(receiver = editor, clipboard = clipboard))
 
     editor.print() // prints "Hello WorldHello World"
     invoker.undo() // undoes the paste command
